@@ -1,0 +1,11 @@
+[
+  {
+    "Name": "New Profile",
+    "Projects": [
+      {
+        "Path": "PV_NA_UsuariosRoles\\PV_NA_UsuariosRoles.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]
