@@ -29,7 +29,7 @@ namespace PV_NA_Seguridad
             .WithSummary("Registra una nueva acción en la bitácora.")
             .WithDescription("Inserta un nuevo registro en la tabla Bitacora con la fecha actual.");
 
-            // ✅ GET /bitacora → listar todas las bitácoras
+  
             app.MapGet("/bitacora", async (BitacoraService service) =>
             {
                 var result = await service.ListarAsync();
@@ -38,7 +38,7 @@ namespace PV_NA_Seguridad
             .WithName("ListarBitacoras")
             .WithSummary("Obtiene todas las bitácoras registradas.");
 
-            // ✅ GET /bitacora/usuario/{id} → listar bitácoras de un usuario
+     
             app.MapGet("/bitacora/usuario/{idUsuario:int}", async (int idUsuario, BitacoraService service) =>
             {
                 var result = await service.ListarPorUsuarioAsync(idUsuario);

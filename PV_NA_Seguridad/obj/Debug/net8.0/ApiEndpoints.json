@@ -1,0 +1,69 @@
+[
+  {
+    "ContainingType": "PV_NA_Seguridad.BitacoraEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapBitacoraEndpoints\u003Eb__0_0",
+    "RelativePath": "bitacora",
+    "HttpMethod": "POST",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "bitacora",
+        "Type": "PV_NA_Seguridad.Entities.Bitacora",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "RegistrarBitacora",
+    "Description": "Inserta un nuevo registro en la tabla Bitacora con la fecha actual.",
+    "Summary": "Registra una nueva acci\u00F3n en la bit\u00E1cora."
+  },
+  {
+    "ContainingType": "PV_NA_Seguridad.BitacoraEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapBitacoraEndpoints\u003Eb__0_1",
+    "RelativePath": "bitacora",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "ListarBitacoras",
+    "Summary": "Obtiene todas las bit\u00E1coras registradas."
+  },
+  {
+    "ContainingType": "PV_NA_Seguridad.BitacoraEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapBitacoraEndpoints\u003Eb__0_2",
+    "RelativePath": "bitacora/usuario/{idUsuario:int}",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idUsuario",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "ListarBitacorasPorUsuario",
+    "Summary": "Obtiene las bit\u00E1coras de un usuario espec\u00EDfico."
+  }
+]

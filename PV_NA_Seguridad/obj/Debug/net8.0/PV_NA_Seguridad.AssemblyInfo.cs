@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PV_NA_Seguridad")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e7ba1b2b4771a1f8ae48b79f27dc454cac65e03c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+78701ccca6e4c912150dca94b87d51b1fc7e114e")]
 [assembly: System.Reflection.AssemblyProductAttribute("PV_NA_Seguridad")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PV_NA_Seguridad")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
