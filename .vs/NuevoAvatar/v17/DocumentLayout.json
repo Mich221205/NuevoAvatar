@@ -3,20 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\Usuario\\workspace\\NuevoAvatar\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{73323548-4752-4308-9421-AF1567EFD40A}|PV_NA_UsuariosRoles\\PV_NA_UsuariosRoles.csproj|c:\\users\\usuario\\workspace\\nuevoavatar\\pv_na_usuariosroles\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{73323548-4752-4308-9421-AF1567EFD40A}|PV_NA_UsuariosRoles\\PV_NA_UsuariosRoles.csproj|solutionrelative:pv_na_usuariosroles\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{73323548-4752-4308-9421-AF1567EFD40A}|PV_NA_UsuariosRoles\\PV_NA_UsuariosRoles.csproj|c:\\users\\usuario\\workspace\\nuevoavatar\\pv_na_usuariosroles\\repository\\usuariorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{73323548-4752-4308-9421-AF1567EFD40A}|PV_NA_UsuariosRoles\\PV_NA_UsuariosRoles.csproj|solutionrelative:pv_na_usuariosroles\\repository\\usuariorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{73323548-4752-4308-9421-AF1567EFD40A}|PV_NA_UsuariosRoles\\PV_NA_UsuariosRoles.csproj|c:\\users\\usuario\\workspace\\nuevoavatar\\pv_na_usuariosroles\\usuarioendpoints.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{73323548-4752-4308-9421-AF1567EFD40A}|PV_NA_UsuariosRoles\\PV_NA_UsuariosRoles.csproj|solutionrelative:pv_na_usuariosroles\\usuarioendpoints.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{73323548-4752-4308-9421-AF1567EFD40A}|PV_NA_UsuariosRoles\\PV_NA_UsuariosRoles.csproj|c:\\users\\usuario\\workspace\\nuevoavatar\\pv_na_usuariosroles\\services\\usuarioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{73323548-4752-4308-9421-AF1567EFD40A}|PV_NA_UsuariosRoles\\PV_NA_UsuariosRoles.csproj|solutionrelative:pv_na_usuariosroles\\services\\usuarioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{73323548-4752-4308-9421-AF1567EFD40A}|PV_NA_UsuariosRoles\\PV_NA_UsuariosRoles.csproj|c:\\users\\usuario\\workspace\\nuevoavatar\\pv_na_usuariosroles\\usuarioendpoints.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{73323548-4752-4308-9421-AF1567EFD40A}|PV_NA_UsuariosRoles\\PV_NA_UsuariosRoles.csproj|solutionrelative:pv_na_usuariosroles\\usuarioendpoints.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{73323548-4752-4308-9421-AF1567EFD40A}|PV_NA_UsuariosRoles\\PV_NA_UsuariosRoles.csproj|c:\\users\\usuario\\workspace\\nuevoavatar\\pv_na_usuariosroles\\repository\\usuariorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{73323548-4752-4308-9421-AF1567EFD40A}|PV_NA_UsuariosRoles\\PV_NA_UsuariosRoles.csproj|solutionrelative:pv_na_usuariosroles\\repository\\usuariorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{73323548-4752-4308-9421-AF1567EFD40A}|PV_NA_UsuariosRoles\\PV_NA_UsuariosRoles.csproj|c:\\users\\usuario\\workspace\\nuevoavatar\\pv_na_usuariosroles\\bd\\pv_na_usuariosroles.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}",
+      "RelativeMoniker": "D:0:0:{73323548-4752-4308-9421-AF1567EFD40A}|PV_NA_UsuariosRoles\\PV_NA_UsuariosRoles.csproj|solutionrelative:pv_na_usuariosroles\\bd\\pv_na_usuariosroles.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{73323548-4752-4308-9421-AF1567EFD40A}|PV_NA_UsuariosRoles\\PV_NA_UsuariosRoles.csproj|c:\\users\\usuario\\workspace\\nuevoavatar\\pv_na_usuariosroles\\bd\\pv_na_usuariosroles.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame",
+      "RelativeMoniker": "D:0:0:{73323548-4752-4308-9421-AF1567EFD40A}|PV_NA_UsuariosRoles\\PV_NA_UsuariosRoles.csproj|solutionrelative:pv_na_usuariosroles\\bd\\pv_na_usuariosroles.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 14,
+          "SelectedChildIndex": 17,
           "Children": [
             {
               "$type": "Bookmark",
@@ -86,33 +90,32 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "AuthService.cs",
-              "DocumentMoniker": "C:\\Users\\Usuario\\workspace\\NuevoAvatar\\PV_NA_UsuariosRoles\\Services\\AuthService.cs",
-              "RelativeDocumentMoniker": "PV_NA_UsuariosRoles\\Services\\AuthService.cs",
-              "ToolTip": "C:\\Users\\Usuario\\workspace\\NuevoAvatar\\PV_NA_UsuariosRoles\\Services\\AuthService.cs",
-              "RelativeToolTip": "PV_NA_UsuariosRoles\\Services\\AuthService.cs",
-              "ViewState": "AgIAAEUAAAAAAAAAAAAowBEAAAAmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-08T06:58:51.085Z",
+              "DocumentIndex": 3,
+              "Title": "PV_NA_UsuariosRoles.sql ",
+              "DocumentMoniker": "C:\\Users\\Usuario\\workspace\\NuevoAvatar\\PV_NA_UsuariosRoles\\BD\\PV_NA_UsuariosRoles.sql",
+              "RelativeDocumentMoniker": "PV_NA_UsuariosRoles\\BD\\PV_NA_UsuariosRoles.sql",
+              "ToolTip": "C:\\Users\\Usuario\\workspace\\NuevoAvatar\\PV_NA_UsuariosRoles\\BD\\PV_NA_UsuariosRoles.sql",
+              "RelativeToolTip": "PV_NA_UsuariosRoles\\BD\\PV_NA_UsuariosRoles.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2025-10-08T21:47:25.418Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "UsuarioRepository.cs",
               "DocumentMoniker": "C:\\Users\\Usuario\\workspace\\NuevoAvatar\\PV_NA_UsuariosRoles\\Repository\\UsuarioRepository.cs",
               "RelativeDocumentMoniker": "PV_NA_UsuariosRoles\\Repository\\UsuarioRepository.cs",
               "ToolTip": "C:\\Users\\Usuario\\workspace\\NuevoAvatar\\PV_NA_UsuariosRoles\\Repository\\UsuarioRepository.cs",
               "RelativeToolTip": "PV_NA_UsuariosRoles\\Repository\\UsuarioRepository.cs",
-              "ViewState": "AgIAAE0AAAAAAAAAAAA1wGkAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAIwCgAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-08T06:55:03.22Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "UsuarioService.cs",
               "DocumentMoniker": "C:\\Users\\Usuario\\workspace\\NuevoAvatar\\PV_NA_UsuariosRoles\\Services\\UsuarioService.cs",
               "RelativeDocumentMoniker": "PV_NA_UsuariosRoles\\Services\\UsuarioService.cs",
@@ -125,7 +128,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "UsuarioEndpoints.cs",
               "DocumentMoniker": "C:\\Users\\Usuario\\workspace\\NuevoAvatar\\PV_NA_UsuariosRoles\\UsuarioEndpoints.cs",
               "RelativeDocumentMoniker": "PV_NA_UsuariosRoles\\UsuarioEndpoints.cs",
