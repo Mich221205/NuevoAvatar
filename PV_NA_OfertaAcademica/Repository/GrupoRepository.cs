@@ -37,7 +37,7 @@ namespace PV_NA_OfertaAcademica.Repository
                 Numero = grupo.Numero_Grupo,  // MAPEO DE LA VARIABLE Numero_Grupo A Numero
                 grupo.ID_Curso,
                 grupo.ID_Profesor,
-                grupo.Horario,
+                grupo.Horario, 
                 grupo.ID_Periodo
             });
         }

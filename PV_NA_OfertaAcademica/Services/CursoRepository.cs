@@ -26,12 +26,15 @@ namespace PV_NA_OfertaAcademica.Repository
             return _db.ExecuteAsync(sql, e);
         }
 
+        // Eliminar curso por ID
         public Task<int> DeleteAsync(int id)
             => _db.ExecuteAsync("DELETE FROM dbo.Curso WHERE ID_Curso=@id", new { id });
 
+        // . Obtener curso por ID
         public Task<Curso?> GetByIdAsync(int id)
             => _db.QueryFirstOrDefaultAsync<Curso>("SELECT * FROM dbo.Curso WHERE ID_Curso=@id", new { id });
 
+        // . Obtener todos los cursos
         public Task<IEnumerable<Curso>> GetAllAsync()
             => _db.QueryAsync<Curso>("SELECT * FROM dbo.Curso ORDER BY ID_Carrera, Nivel, Nombre");
 

@@ -8,6 +8,10 @@ namespace PV_NA_OfertaAcademica
         // Extensión para mapear los endpoints relacionados con cursos.
         public static RouteGroupBuilder MapCursoEndpoints(this IEndpointRouteBuilder app)
         {
+            var group = app.MapGroup("/curso")
+                           .WithOpenApi()
+                           .WithTags("Curso");
+
             // Grupo de rutas para /curso
             var g = app.MapGroup("/curso");
 

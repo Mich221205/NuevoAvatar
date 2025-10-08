@@ -7,6 +7,11 @@ namespace PV_NA_OfertaAcademica
     {
         public static void MapInstitucionEndpoints(this WebApplication app)
         {
+            var group = app.MapGroup("/institucion")
+                           .WithOpenApi()
+                           .WithTags("Institucion");
+
+
             app.MapGet("/institucion", async (IInstitucionService service) =>
                 Results.Ok(await service.ListarAsync()));
 

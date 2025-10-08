@@ -347,5 +347,136 @@
         "StatusCode": 200
       }
     ]
+  },
+  {
+    "ContainingType": "PV_NA_OfertaAcademica.Controllers.PeriodoEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapPeriodoEndpoints\u003Eb__0_0",
+    "RelativePath": "periodo/",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Periodo"
+    ],
+    "Description": "Retorna la lista completa de periodos registrados.",
+    "Summary": "Obtiene todos los periodos"
+  },
+  {
+    "ContainingType": "PV_NA_OfertaAcademica.Controllers.PeriodoEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapPeriodoEndpoints\u003Eb__0_2",
+    "RelativePath": "periodo/",
+    "HttpMethod": "POST",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "PV_NA_OfertaAcademica.Dtos.PeriodoCreateDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Periodo"
+    ],
+    "Description": "Crea un nuevo periodo en la base de datos",
+    "Summary": "Crea un nuevo periodo"
+  },
+  {
+    "ContainingType": "PV_NA_OfertaAcademica.Controllers.PeriodoEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapPeriodoEndpoints\u003Eb__0_1",
+    "RelativePath": "periodo/{id}",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Periodo"
+    ],
+    "Summary": "Obtiene un periodo por ID"
+  },
+  {
+    "ContainingType": "PV_NA_OfertaAcademica.Controllers.PeriodoEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapPeriodoEndpoints\u003Eb__0_3",
+    "RelativePath": "periodo/{id}",
+    "HttpMethod": "PUT",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "PV_NA_OfertaAcademica.Dtos.PeriodoUpdateDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Periodo"
+    ],
+    "Summary": "Modifica un periodo existente"
+  },
+  {
+    "ContainingType": "PV_NA_OfertaAcademica.Controllers.PeriodoEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapPeriodoEndpoints\u003Eb__0_4",
+    "RelativePath": "periodo/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Periodo"
+    ],
+    "Summary": "Elimina un periodo existente"
   }
 ]

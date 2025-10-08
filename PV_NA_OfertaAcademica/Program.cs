@@ -4,6 +4,7 @@ using Microsoft.Data.SqlClient;
 using Microsoft.Extensions.Options;
 using Microsoft.OpenApi.Models;
 using PV_NA_OfertaAcademica;
+using PV_NA_OfertaAcademica.Controllers;
 using PV_NA_OfertaAcademica.Repository;
 using PV_NA_OfertaAcademica.Services;
 using System.Data;
@@ -38,6 +39,10 @@ builder.Services.AddScoped<IInstitucionService, InstitucionService>();
 // dependencia Curso
 builder.Services.AddScoped<ICursoRepository, CursoRepository>();
 builder.Services.AddScoped<ICursoService, CursoService>();
+
+// Dependencias del periodo
+builder.Services.AddScoped<PeriodoRepository>();
+builder.Services.AddScoped<PeriodoService>();
 /*
 //  Validación JWT 
 builder.Services.AddHttpClient<TokenValidator>();
@@ -65,6 +70,7 @@ if (app.Environment.IsDevelopment())
 app.MapInstitucionEndpoints();
 app.MapCursoEndpoints();
 app.MapGrupoEndpoints();
+app.MapPeriodoEndpoints();
 
 app.Run();
 

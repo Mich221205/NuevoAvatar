@@ -8,6 +8,10 @@ namespace PV_NA_OfertaAcademica
     {
         public static void MapGrupoEndpoints(this WebApplication app)
         {
+            var group = app.MapGroup("/grupo")
+                           .WithOpenApi()
+                           .WithTags("Grupo");
+
             app.MapGet("/grupo", async (GrupoRepository repo) =>
             {
                 var grupos = await repo.GetAllAsync();

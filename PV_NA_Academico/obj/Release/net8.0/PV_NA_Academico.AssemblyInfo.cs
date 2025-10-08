@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PV_NA_Academico")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+81397127a106dcf208b7184573861eaf4655da8d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+55eaaba199d6ee789664ca909fb77017952beb5a")]
 [assembly: System.Reflection.AssemblyProductAttribute("PV_NA_Academico")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PV_NA_Academico")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

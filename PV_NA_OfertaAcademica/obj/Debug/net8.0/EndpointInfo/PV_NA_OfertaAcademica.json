@@ -6,6 +6,120 @@
     "version": "v1"
   },
   "paths": {
+    "/periodo": {
+      "get": {
+        "tags": [
+          "Periodo"
+        ],
+        "summary": "Obtiene todos los periodos",
+        "description": "Retorna la lista completa de periodos registrados.",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Periodo"
+        ],
+        "summary": "Crea un nuevo periodo",
+        "description": "Crea un nuevo periodo en la base de datos",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PeriodoCreateDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/periodo/{id}": {
+      "get": {
+        "tags": [
+          "Periodo"
+        ],
+        "summary": "Obtiene un periodo por ID",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Periodo"
+        ],
+        "summary": "Modifica un periodo existente",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PeriodoUpdateDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Periodo"
+        ],
+        "summary": "Elimina un periodo existente",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/institucion": {
       "get": {
         "tags": [
@@ -455,6 +569,54 @@
           "nombre": {
             "type": "string",
             "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "PeriodoCreateDto": {
+        "type": "object",
+        "properties": {
+          "anio": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "numero_Periodo": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "fecha_Inicio": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "fecha_Fin": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "additionalProperties": false
+      },
+      "PeriodoUpdateDto": {
+        "type": "object",
+        "properties": {
+          "anio": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "numero_Periodo": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "fecha_Inicio": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "fecha_Fin": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "iD_Periodo": {
+            "type": "integer",
+            "format": "int32"
           }
         },
         "additionalProperties": false
