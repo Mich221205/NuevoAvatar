@@ -1,0 +1,481 @@
+[
+  {
+    "ContainingType": "PV_NA_Matricula.DireccionEndPoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapDireccionEndpoints\u003Eb__0_1",
+    "RelativePath": "direccion/cantones",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idProvincia",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "PV_NA_Matricula.DireccionEndPoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapDireccionEndpoints\u003Eb__0_2",
+    "RelativePath": "direccion/distritos",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idProvincia",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "idCanton",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "PV_NA_Matricula.DireccionEndPoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapDireccionEndpoints\u003Eb__0_0",
+    "RelativePath": "direccion/provincias",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "PV_NA_Matricula.EstudianteEndPoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapEstudianteEndpoints\u003Eb__0_0",
+    "RelativePath": "expediente/",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "PV_NA_Matricula.EstudianteEndPoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapEstudianteEndpoints\u003Eb__0_2",
+    "RelativePath": "expediente/",
+    "HttpMethod": "POST",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "e",
+        "Type": "PV_NA_Matricula.Entities.Estudiante",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "PV_NA_Matricula.EstudianteEndPoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapEstudianteEndpoints\u003Eb__0_1",
+    "RelativePath": "expediente/{id}",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "PV_NA_Matricula.EstudianteEndPoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapEstudianteEndpoints\u003Eb__0_3",
+    "RelativePath": "expediente/{id}",
+    "HttpMethod": "PUT",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "e",
+        "Type": "PV_NA_Matricula.Entities.Estudiante",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "PV_NA_Matricula.EstudianteEndPoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapEstudianteEndpoints\u003Eb__0_4",
+    "RelativePath": "expediente/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "PV_NA_Matricula.MatriculaEndPoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapMatriculaEndpoints\u003Eb__0_0",
+    "RelativePath": "matricula/",
+    "HttpMethod": "POST",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "m",
+        "Type": "PV_NA_Matricula.Entities.Matricula",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "PV_NA_Matricula.MatriculaEndPoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapMatriculaEndpoints\u003Eb__0_1",
+    "RelativePath": "matricula/{id}",
+    "HttpMethod": "PUT",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "m",
+        "Type": "PV_NA_Matricula.Entities.Matricula",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "PV_NA_Matricula.MatriculaEndPoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapMatriculaEndpoints\u003Eb__0_2",
+    "RelativePath": "matricula/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "PV_NA_Matricula.MatriculaEndPoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapMatriculaEndpoints\u003Eb__0_3",
+    "RelativePath": "matricula/curso/{idCurso}/grupo/{idGrupo}",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idCurso",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "idGrupo",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "PV_NA_Matricula.NotasEndPoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapNotasEndpoints\u003Eb__0_1",
+    "RelativePath": "Notas/asignarnotarubro",
+    "HttpMethod": "POST",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "nota",
+        "Type": "PV_NA_Matricula.Entities.Nota",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "PV_NA_Matricula.NotasEndPoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapNotasEndpoints\u003Eb__0_0",
+    "RelativePath": "Notas/cargardesglose",
+    "HttpMethod": "POST",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idGrupo",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "rubros",
+        "Type": "System.Collections.Generic.List\u00601[[PV_NA_Matricula.Entities.NotaRubro, PV_NA_Matricula, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "PV_NA_Matricula.NotasEndPoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapNotasEndpoints\u003Eb__0_2",
+    "RelativePath": "Notas/obtenerdesglose/{idGrupo}",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idGrupo",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "PV_NA_Matricula.NotasEndPoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapNotasEndpoints\u003Eb__0_3",
+    "RelativePath": "Notas/obtenernotas",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idEstudiante",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "idGrupo",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "PV_NA_Matricula.PreMatriculaEndPoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapPreMatriculaEndpoints\u003Eb__0_0",
+    "RelativePath": "prematricula/",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "PV_NA_Matricula.PreMatriculaEndPoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapPreMatriculaEndpoints\u003Eb__0_2",
+    "RelativePath": "prematricula/",
+    "HttpMethod": "POST",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pre",
+        "Type": "PV_NA_Matricula.Entities.PreMatricula",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "PV_NA_Matricula.PreMatriculaEndPoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapPreMatriculaEndpoints\u003Eb__0_1",
+    "RelativePath": "prematricula/{id}",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "PV_NA_Matricula.PreMatriculaEndPoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapPreMatriculaEndpoints\u003Eb__0_3",
+    "RelativePath": "prematricula/{id}",
+    "HttpMethod": "PUT",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "pre",
+        "Type": "PV_NA_Matricula.Entities.PreMatricula",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "PV_NA_Matricula.PreMatriculaEndPoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapPreMatriculaEndpoints\u003Eb__0_4",
+    "RelativePath": "prematricula/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  }
+]
