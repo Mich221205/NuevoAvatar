@@ -51,7 +51,7 @@ CREATE TABLE Periodo (
 
 CREATE TABLE Grupo (
     ID_Grupo INT IDENTITY(1,1) PRIMARY KEY,
-    Numero INT NOT NULL,
+    Numero_Grupo INT NOT NULL,
     ID_Curso INT NOT NULL,
     ID_Profesor INT NOT NULL,
     Horario VARCHAR(200) NOT NULL,

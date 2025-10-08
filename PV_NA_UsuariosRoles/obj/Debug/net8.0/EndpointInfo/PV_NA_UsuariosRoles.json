@@ -236,9 +236,6 @@
         "additionalProperties": { }
       },
       "RefreshRequest": {
-        "required": [
-          "refreshToken"
-        ],
         "type": "object",
         "properties": {
           "refreshToken": {

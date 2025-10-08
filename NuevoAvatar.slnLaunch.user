@@ -3,7 +3,7 @@
     "Name": "New Profile",
     "Projects": [
       {
-        "Path": "PV_NA_UsuariosRoles\\PV_NA_UsuariosRoles.csproj",
+        "Path": "PV_NA_OfertaAcademica\\PV_NA_OfertaAcademica.csproj",
         "Action": "Start"
       }
     ]

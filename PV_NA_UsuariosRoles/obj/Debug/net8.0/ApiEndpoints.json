@@ -54,7 +54,7 @@
     "Parameters": [
       {
         "Name": "request",
-        "Type": "Microsoft.AspNetCore.Identity.Data.RefreshRequest",
+        "Type": "PV_NA_UsuariosRoles.Controllers.RefreshRequest",
         "IsRequired": true
       }
     ],

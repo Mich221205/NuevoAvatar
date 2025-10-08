@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PV_NA_Reportes")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cd5b4bd5f273e02cfd91db95ad042edd7299cf7c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+528752e23616d759250bf4bb10423936d750d79d")]
 [assembly: System.Reflection.AssemblyProductAttribute("PV_NA_Reportes")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PV_NA_Reportes")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

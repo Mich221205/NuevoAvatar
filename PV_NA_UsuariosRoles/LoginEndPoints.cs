@@ -1,13 +1,61 @@
-﻿using Microsoft.AspNetCore.Identity.Data;
+﻿using Microsoft.AspNetCore.Mvc;
+using PV_NA_UsuariosRoles.Services;
+using Microsoft.AspNetCore.Identity.Data;
 using Microsoft.AspNetCore.Mvc;
 //using PV_NA_UsuariosRoles.DTOs;
 using PV_NA_UsuariosRoles.Services;
 
+
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using PV_NA_UsuariosRoles.Services;
+using System.ComponentModel.DataAnnotations;
+/*
 namespace PV_NA_UsuariosRoles.Controllers
 {
-    /// <summary>
-    /// Controlador para gestionar la autenticación de usuarios
-    /// </summary>
+    [ApiController]
+    [Route("[controller]")]
+    public class LoginController : ControllerBase
+    {
+        private readonly AuthService _auth;
+        public LoginController(AuthService auth) => _auth = auth;
+
+        // POST /login -> Body
+        [HttpPost]
+        [AllowAnonymous]
+        public async Task<IActionResult> Login([FromBody] LoginRequest req)
+        {
+            var token = await _auth.LoginAsync(req.Username, req.Password);
+            return token is null ? Unauthorized(new { error = "Credenciales inválidas" }) : Ok(token);
+        }
+
+        // GET /login/validate?token=... -> Query (NO body)
+        [HttpGet("validate")]
+        [AllowAnonymous]
+        public IActionResult Validate([FromQuery, Required] string token)
+        {
+            var ok = _auth.Validate(token);
+            return ok ? Ok(new { valid = true }) : Unauthorized(new { valid = false });
+        }
+
+        // POST /login/refresh -> Body
+        [HttpPost("refresh")]
+        [AllowAnonymous]
+        public async Task<IActionResult> Refresh([FromBody] RefreshRequest req)
+        {
+            var token = await _auth.RefreshAsync(req.Refresh_Token);
+            return token is null ? Unauthorized(new { error = "Refresh inválido" }) : Ok(token);
+        }
+    }
+
+    // DTOs para claridad
+    public record LoginRequest(string Username, string Password);
+    public record RefreshRequest([property: Required] string Refresh_Token);
+}
+*/
+
+namespace PV_NA_UsuariosRoles.Controllers
+{
     [ApiController]
     [Route("[controller]")]
     public class LoginController : ControllerBase
@@ -15,11 +63,6 @@ namespace PV_NA_UsuariosRoles.Controllers
         private readonly AuthService _authService;
         private readonly ILogger<LoginController> _logger;
 
-        /// <summary>
-        /// Constructor del controlador de autenticación
-        /// </summary>
-        /// <param name="authService">Servicio de autenticación</param>
-        /// <param name="logger">Logger para registro de eventos</param>
         public LoginController(AuthService authService, ILogger<LoginController> logger)
         {
             _authService = authService;
@@ -27,16 +70,8 @@ namespace PV_NA_UsuariosRoles.Controllers
         }
 
         /// <summary>
-        /// Inicia sesión y genera los tokens JWT (access y refresh).
+        /// Endpoint para iniciar sesión - REQUERIMIENTO PRINCIPAL
         /// </summary>
-        /// <param name="usuario">Correo electrónico del usuario.</param>
-        /// <param name="contrasena">Contraseña del usuario.</param>
-        /// <returns>
-        /// 201 Created: Tokens generados exitosamente con access token, refresh token y fecha de expiración.
-        /// 400 Bad Request: Cuando faltan los encabezados de usuario o contraseña.
-        /// 401 Unauthorized: Cuando las credenciales son incorrectas.
-        /// 500 Internal Server Error: Cuando ocurre un error inesperado en el servidor.
-        /// </returns>
         [HttpPost("login")]
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
@@ -45,98 +80,111 @@ namespace PV_NA_UsuariosRoles.Controllers
             [FromHeader(Name = "usuario")] string usuario,
             [FromHeader(Name = "contrasena")] string contrasena)
         {
-            // Validar que los parámetros obligatorios estén presentes
-            if (string.IsNullOrWhiteSpace(usuario) || string.IsNullOrWhiteSpace(contrasena))
-                return BadRequest(new { message = "Debe incluir los encabezados 'usuario' y 'contrasena'." });
+            //  Todos los datos son requeridos y no pueden ser nulos o blancos
+            if (string.IsNullOrWhiteSpace(usuario))
+                return BadRequest(new { message = "El encabezado 'usuario' es requerido." });
+
+            if (string.IsNullOrWhiteSpace(contrasena))
+                return BadRequest(new { message = "El encabezado 'contrasena' es requerido." });
 
             try
             {
-                // Intentar autenticar al usuario con las credenciales proporcionadas
+                // 
                 var result = await _authService.LoginAsync(usuario, contrasena);
 
-                // Si la autenticación falla, retornar error 401
+                //  Si falla → 401 con mensaje exacto
                 if (result == null)
                     return Unauthorized(new { message = "Usuario y/o contraseña incorrectos." });
 
-                // Retornar 201 Created con los tokens generados
-                return Created("", result);
+                
+                return StatusCode(StatusCodes.Status201Created, new
+                {
+                    expires_in = result,        // horaVencimiento
+                    access_token = result,    // jwtToken  
+                    refresh_token = result,  // refreshToken
+                    usuarioID = result           // identificador
+                });
             }
             catch (Exception ex)
             {
-                // Registrar error en logs y retornar error 500
-                _logger.LogError(ex, "Error en el proceso de login para usuario {Usuario}", usuario);
-                return StatusCode(StatusCodes.Status500InternalServerError, new { message = "Error interno del servidor." });
+                _logger.LogError(ex, "Error en login para usuario: {Usuario}", usuario);
+                return StatusCode(500, new { message = "Error interno del servidor." });
             }
         }
 
         /// <summary>
-        /// Genera nuevos tokens a partir de un refresh_token válido.
+        /// Endpoint para refrescar token - REQUERIMIENTO SECUNDARIO
         /// </summary>
-        /// <param name="request">Objeto que contiene el refresh token actual.</param>
-        /// <returns>
-        /// 201 Created: Nuevos tokens generados exitosamente (access_token y refresh_token).
-        /// 400 Bad Request: Cuando no se proporciona el refresh token.
-        /// 401 Unauthorized: Cuando el refresh token es inválido o ha expirado.
-        /// </returns>
         [HttpPost("refresh")]
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         public async Task<IActionResult> Refresh([FromBody] RefreshRequest request)
         {
-            // Validar que se haya proporcionado un refresh token
+            // 
             if (request == null || string.IsNullOrWhiteSpace(request.RefreshToken))
-                return BadRequest(new { message = "Debe enviar el refresh_token" });
+                return BadRequest(new { message = "El refresh token es requerido." });
 
-            // Generar nuevos tokens usando el refresh token proporcionado
-            var result = await _authService.RefreshAsync(request.RefreshToken);
+            try
+            {
+                var result = await _authService.RefreshAsync(request.RefreshToken);
 
-            // Si el refresh token es inválido, retornar error 401
-            if (result == null)
-                return Unauthorized(new { message = "Token inválido o expirado" });
+               
+                if (result == null)
+                    return Unauthorized(new { message = "No autorizado." });
 
-            // Retornar 201 Created con los nuevos tokens
-            return StatusCode(StatusCodes.Status201Created, result);
+             
+                return StatusCode(StatusCodes.Status201Created, new
+                {
+                    expires_in = result,        // horaVencimiento
+                    access_token = result,    // jwtToken
+                    refresh_token = result   // refreshToken
+                });
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error en refresh token");
+                return StatusCode(500, new { message = "Error interno del servidor." });
+            }
         }
 
         /// <summary>
-        /// Valida si un access_token sigue siendo válido.
+        /// Endpoint para validar token - REQUERIMIENTO SECUNDARIO
         /// </summary>
-        /// <param name="token">Access token a validar.</param>
-        /// <returns>
-        /// 200 OK: Token válido con valor true.
-        /// 400 Bad Request: Cuando no se proporciona el token.
-        /// 401 Unauthorized: Cuando el token es inválido o ha expirado.
-        /// 500 Internal Server Error: Cuando ocurre un error inesperado en el servidor.
-        /// </returns>
         [HttpGet("validate")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         public IActionResult Validate([FromQuery] string token)
         {
-            // Validar que se haya proporcionado un token
+            //  Token requerido
             if (string.IsNullOrWhiteSpace(token))
-                return BadRequest(new { message = "Debe enviar el parámetro 'token'." });
+                return BadRequest(new { message = "El token es requerido." });
 
             try
             {
-                // Validar el token usando el servicio de autenticación
                 bool valido = _authService.Validate(token);
 
-                // Si el token no es válido, retornar error 401
+                // Válido → 200 + true, Inválido → 401
                 if (!valido)
-                    return Unauthorized(new { message = "Token inválido o expirado." });
+                    return Unauthorized(); // 401 sin mensaje (según requerimiento)
 
-                // Retornar 200 OK indicando que el token es válido
+               
                 return Ok(true);
             }
             catch (Exception ex)
             {
-                // Registrar error en logs y retornar error 500
-                _logger.LogError(ex, "Error en la validación del token.");
-                return StatusCode(StatusCodes.Status500InternalServerError, new { message = "Error interno del servidor." });
+                _logger.LogError(ex, "Error validando token");
+                return StatusCode(500, new { message = "Error interno del servidor." });
             }
         }
+    }
+
+    /// <summary>
+    /// DTO para refresh request
+    /// </summary>
+    public class RefreshRequest
+    {
+        public string RefreshToken { get; set; }
     }
 }

@@ -1,23 +1,56 @@
+//using PV_NA_OfertaAcademica.Middleware;
+//using PV_NA_OfertaAcademica.Helpers;
+using Microsoft.Data.SqlClient;
+using Microsoft.Extensions.Options;
+using Microsoft.OpenApi.Models;
+using PV_NA_OfertaAcademica;
+using PV_NA_OfertaAcademica.Repository;
+using PV_NA_OfertaAcademica.Services;
+using System.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 
-// Add services to the container.
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+// Conexion a la base de datos
+builder.Services.AddScoped<IDbConnection>(sp =>
+    new SqlConnection(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+
+
+// Dependencias del institucion
+builder.Services.AddScoped<IInstitucionRepository, InstitucionRepository>();
+builder.Services.AddScoped<IInstitucionService, InstitucionService>();
+
+// dependencia Curso
+builder.Services.AddScoped<ICursoRepository, CursoRepository>();
+builder.Services.AddScoped<ICursoService, CursoService>();
+/*
+//  Validación JWT 
+builder.Services.AddHttpClient<TokenValidator>();
+builder.Services.AddSingleton<TokenValidator>();
+*/
+
+
+
+
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-
-
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
+
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+//  Middleware de validación de token
+//app.UseJwtValidation();
+
+app.MapInstitucionEndpoints();
+app.MapCursoEndpoints();
 
 
 app.Run();
