@@ -16,7 +16,7 @@ namespace PV_NA_Matricula.Repository
 		public async Task<IEnumerable<Provincia>> GetProvinciasAsync()
 		{
 			using var conn = await _factory.CreateConnectionAsync();
-			return await conn.QueryAsync<Provincia>("SELECT ID_Provincia, Nombre FROM Provincia");
+			return await conn.QueryAsync<Provincia>("SELECT ID_Provincia, Nombre FROM Provincia"); 
 		}
 
 		public async Task<IEnumerable<Canton>> GetCantonesPorProvinciaAsync(int idProvincia)

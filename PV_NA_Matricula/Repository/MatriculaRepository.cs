@@ -27,7 +27,7 @@ namespace PV_NA_Matricula.Repository
 		{
 			using var conn = await _factory.CreateConnectionAsync();
 			var sql = @"UPDATE Matricula SET
-                        ID_Estudiante=@ID_Estudiante, ID_Curso=@ID_Curso,
+                        ID_Estudiante=@ID_Estudiante, ID_Curso=@ID_Curso, 
                         ID_Grupo=@ID_Grupo, ID_Periodo=@ID_Periodo
                         WHERE ID_Matricula=@ID_Matricula";
 			return await conn.ExecuteAsync(sql, m);

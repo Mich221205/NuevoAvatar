@@ -31,7 +31,7 @@ namespace PV_NA_OfertaAcademica
 				catch (Exception ex)
 				{
 					return Results.BadRequest(new { Error = ex.Message });
-				}
+				} 
 			});
 
 			group.MapPut("/", async (Profesor profesor, IProfesorService service) =>

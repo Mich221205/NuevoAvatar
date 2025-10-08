@@ -27,7 +27,7 @@ namespace PV_NA_Matricula.Repository
 		}
 
 		public async Task<int> InsertAsync(PreMatricula pre)
-		{
+		{ 
 			using var connection = await _connectionFactory.CreateConnectionAsync();
 			var sql = @"
                 INSERT INTO PreMatricula (ID_Estudiante, ID_Carrera, ID_Curso, ID_Periodo, Observaciones)

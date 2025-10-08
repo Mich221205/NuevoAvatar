@@ -27,7 +27,7 @@ namespace PV_NA_Matricula.Services
 		{
 			ValidarEstudiante(e);
 			return await _repo.UpdateAsync(e);
-		}
+		} 
 
 		public async Task<int> DeleteAsync(int id) => await _repo.DeleteAsync(id);
 

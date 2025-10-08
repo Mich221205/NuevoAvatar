@@ -14,3 +14,4 @@ namespace PV_NA_Matricula.Repository
 		Task<bool> ExisteNotaAsync(int idEstudiante, int idRubro, int idGrupo);
 	}
 }
+ 

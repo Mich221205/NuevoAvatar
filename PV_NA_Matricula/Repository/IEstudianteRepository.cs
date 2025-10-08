@@ -11,3 +11,4 @@ namespace PV_NA_Matricula.Repository
 		Task<int> DeleteAsync(int id);
 	}
 }
+ 

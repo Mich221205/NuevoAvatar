@@ -5,6 +5,6 @@
         public int ID_Distrito { get; set; }
         public string Nombre { get; set; } = string.Empty;
         public int ID_Canton { get; set; }
-        public int ID_Provincia { get; set; }
+        public int ID_Provincia { get; set; } 
     }
 }

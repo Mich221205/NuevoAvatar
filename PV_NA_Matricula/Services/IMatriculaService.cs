@@ -10,3 +10,4 @@ namespace PV_NA_Matricula.Services
 		Task<IEnumerable<object>> GetEstudiantesPorCursoYGrupoAsync(int idCurso, int idGrupo);
 	}
 }
+ 

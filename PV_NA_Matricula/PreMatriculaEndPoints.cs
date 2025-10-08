@@ -25,7 +25,7 @@ namespace PV_NA_Matricula
 			{
 				var id = await service.CreateAsync(pre);
 				return Results.Created($"/prematricula/{id}", pre);
-			});
+			}); 
 
 			group.MapPut("/{id}", async (int id, PreMatricula pre, IPreMatriculaService service) =>
 			{

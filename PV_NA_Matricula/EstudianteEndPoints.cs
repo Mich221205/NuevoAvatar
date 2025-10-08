@@ -31,7 +31,7 @@ namespace PV_NA_Matricula
 			{
 				if (id != e.ID_Estudiante) return Results.BadRequest();
 				await service.UpdateAsync(e);
-				return Results.NoContent();
+				return Results.NoContent(); 
 			});
 
 			group.MapDelete("/{id}", async (int id, IEstudianteService service) =>

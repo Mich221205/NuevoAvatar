@@ -3,12 +3,12 @@
     public class Estudiante
     {
         public int ID_Estudiante { get; set; }
-        public string Identificacion { get; set; }
-        public string Tipo_Identificacion { get; set; }
-        public string Email { get; set; }
-        public string Nombre { get; set; }
+        public string Identificacion { get; set; } = string.Empty;
+		public string Tipo_Identificacion { get; set; } = string.Empty;
+		public string Email { get; set; } = string.Empty;
+        public string Nombre { get; set; } = string.Empty;
         public DateTime Fecha_Nacimiento { get; set; }
-        public string Direccion { get; set; }
-        public string Telefono { get; set; }
+        public string Direccion { get; set; } = string.Empty;
+        public string Telefono { get; set; } = string.Empty;
     }
 }

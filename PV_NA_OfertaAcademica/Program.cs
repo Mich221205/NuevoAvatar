@@ -22,3 +22,4 @@ if (app.Environment.IsDevelopment())
 app.MapProfesorEndpoints();
 
 app.Run();
+ 

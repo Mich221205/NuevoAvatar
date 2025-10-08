@@ -17,7 +17,7 @@ namespace PV_NA_Matricula.Repository
 		{
 			using var conn = await _factory.CreateConnectionAsync();
 			return await conn.QueryAsync<Estudiante>("SELECT * FROM Estudiante");
-		}
+		} 
 
 		public async Task<Estudiante?> GetByIdAsync(int id)
 		{

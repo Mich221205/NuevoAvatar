@@ -54,7 +54,7 @@ namespace PV_NA_OfertaAcademica.Repository
 			return await conn.ExecuteAsync(sql, new { id });
 		}
 
-		public async Task<bool> ExisteIdentificacionAsync(string identificacion)
+		public async Task<bool> ExisteIdentificacionAsync(string identificacion) 
 		{
 			using var conn = await _factory.CreateConnectionAsync();
 			var sql = "SELECT COUNT(*) FROM Profesor WHERE Identificacion=@identificacion";

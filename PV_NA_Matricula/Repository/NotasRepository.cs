@@ -27,7 +27,7 @@ namespace PV_NA_Matricula.Repository
 			var sql = @"
                 SELECT 
                     n.ID_Nota, 
-                    n.ID_Rubro, 
+                    n.ID_Rubro,  
                     n.ID_Estudiante, 
                     n.Valor,
 					n.ID_Grupo

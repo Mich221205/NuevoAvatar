@@ -3,6 +3,6 @@
     public class Provincia
     {
         public int ID_Provincia { get; set; }
-        public string Nombre { get; set; } = string.Empty;
+        public string Nombre { get; set; } = string.Empty; 
 	}
 }

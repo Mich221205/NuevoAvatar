@@ -34,5 +34,5 @@ namespace PV_NA_Matricula
 				return data.Any() ? Results.Ok(data) : Results.NotFound("No hay estudiantes matriculados en ese curso y grupo.");
 			});
 		}
-	}
+	} 
 }

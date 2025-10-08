@@ -27,7 +27,7 @@ namespace PV_NA_Matricula.Services
 		{
 			return await _repo.DeleteAsync(id);
 		}
-
+		 
 		public async Task<IEnumerable<object>> GetEstudiantesPorCursoYGrupoAsync(int idCurso, int idGrupo)
 		{
 			return await _repo.GetEstudiantesPorCursoYGrupoAsync(idCurso, idGrupo);

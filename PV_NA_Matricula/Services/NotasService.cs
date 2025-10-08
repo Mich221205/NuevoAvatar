@@ -32,7 +32,7 @@ namespace PV_NA_Matricula.Services
 				if (rubro.Porcentaje <= 0)
 					throw new Exception($"El rubro '{rubro.Nombre}' debe tener un porcentaje mayor a 0.");
 			}
-
+			 
 			// Reemplaza los rubros anteriores
 			return await _repo.CargarDesgloseAsync(rubros, idGrupo);
 		}

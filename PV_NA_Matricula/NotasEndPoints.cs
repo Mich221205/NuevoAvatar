@@ -36,6 +36,6 @@ namespace PV_NA_Matricula
 				var data = await service.ObtenerNotasAsync(idEstudiante, idGrupo);
 				return Results.Ok(data);
 			});
-		}
+		} 
 	}
 }

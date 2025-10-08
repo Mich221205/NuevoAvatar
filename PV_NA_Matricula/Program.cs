@@ -34,4 +34,4 @@ app.MapEstudianteEndpoints();
 app.MapDireccionEndpoints();
 app.MapNotasEndpoints();
 
-app.Run();
+app.Run(); 

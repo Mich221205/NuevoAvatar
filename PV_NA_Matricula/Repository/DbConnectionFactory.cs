@@ -16,7 +16,7 @@ namespace PV_NA_Matricula.Repository
 		{
 			var connection = new SqlConnection(_config.GetConnectionString("DefaultConnection"));
 			await connection.OpenAsync();
-			return connection;
+			return connection; 
 		}
 	}
 }
