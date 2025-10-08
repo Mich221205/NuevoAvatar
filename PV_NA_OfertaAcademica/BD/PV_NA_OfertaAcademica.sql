@@ -51,7 +51,7 @@ CREATE TABLE Periodo (
 
 CREATE TABLE Grupo (
     ID_Grupo INT IDENTITY(1,1) PRIMARY KEY,
-    Numero_Grupo INT NOT NULL,
+    NumerO INT NOT NULL,
     ID_Curso INT NOT NULL,
     ID_Profesor INT NOT NULL,
     Horario VARCHAR(200) NOT NULL,
@@ -128,7 +128,7 @@ INSERT INTO Curso (Nombre, Nivel, ID_Carrera) VALUES
 -- ===========================
 -- PERIODOS
 -- ===========================
-INSERT INTO Periodo (Anno, Numero, Fecha_Inicio, Fecha_Fin) VALUES
+INSERT INTO Periodo (Anno, Numero_, Fecha_Inicio, Fecha_Fin) VALUES
 (2024, 1, '2024-01-15', '2024-06-15'),
 (2024, 2, '2024-07-01', '2024-12-01'),
 (2025, 1, '2025-01-13', '2025-06-13'),

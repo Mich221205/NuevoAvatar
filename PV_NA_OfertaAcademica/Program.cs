@@ -16,7 +16,20 @@ builder.Services.AddControllers();
 builder.Services.AddScoped<IDbConnection>(sp =>
     new SqlConnection(builder.Configuration.GetConnectionString("DefaultConnection")));
 
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen(options =>
+{
+    options.SwaggerDoc("v1", new OpenApiInfo
+    {
+        Title = "API Oferta Académica - ACD4",
+        Version = "v1",
+        Description = "Servicio para administrar grupos académicos"
+    });
+});
 
+
+
+builder.Services.AddScoped<GrupoRepository>();
 
 // Dependencias del institucion
 builder.Services.AddScoped<IInstitucionRepository, InstitucionRepository>();
@@ -51,7 +64,7 @@ if (app.Environment.IsDevelopment())
 
 app.MapInstitucionEndpoints();
 app.MapCursoEndpoints();
-
+app.MapGrupoEndpoints();
 
 app.Run();
 

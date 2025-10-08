@@ -131,6 +131,115 @@
     ]
   },
   {
+    "ContainingType": "PV_NA_OfertaAcademica.GrupoEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapGrupoEndpoints\u003Eb__0_0",
+    "RelativePath": "grupo",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "PV_NA_OfertaAcademica.GrupoEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapGrupoEndpoints\u003Eb__0_2",
+    "RelativePath": "grupo",
+    "HttpMethod": "POST",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "PV_NA_OfertaAcademica.Dtos.GrupoCreateDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "PV_NA_OfertaAcademica.GrupoEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapGrupoEndpoints\u003Eb__0_1",
+    "RelativePath": "grupo/{id}",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "PV_NA_OfertaAcademica.GrupoEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapGrupoEndpoints\u003Eb__0_3",
+    "RelativePath": "grupo/{id}",
+    "HttpMethod": "PUT",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "PV_NA_OfertaAcademica.Dtos.GrupoUpdateDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "PV_NA_OfertaAcademica.GrupoEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapGrupoEndpoints\u003Eb__0_4",
+    "RelativePath": "grupo/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "PV_NA_OfertaAcademica.InstitucionEndpoints\u002B\u003C\u003Ec",
     "Method": "\u003CMapInstitucionEndpoints\u003Eb__0_0",
     "RelativePath": "institucion",

@@ -1,8 +1,9 @@
 {
   "openapi": "3.0.1",
   "info": {
-    "title": "PV_NA_OfertaAcademica",
-    "version": "1.0"
+    "title": "API Oferta Académica - ACD4",
+    "description": "Servicio para administrar grupos académicos",
+    "version": "v1"
   },
   "paths": {
     "/institucion": {
@@ -79,6 +80,113 @@
             "application/json": {
               "schema": {
                 "$ref": "#/components/schemas/Institucion"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "PV_NA_OfertaAcademica"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/grupo": {
+      "get": {
+        "tags": [
+          "PV_NA_OfertaAcademica"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "PV_NA_OfertaAcademica"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GrupoCreateDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/grupo/{id}": {
+      "get": {
+        "tags": [
+          "PV_NA_OfertaAcademica"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "PV_NA_OfertaAcademica"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GrupoUpdateDto"
               }
             }
           },
@@ -275,6 +383,62 @@
             "format": "int32"
           },
           "iD_Carrera": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "GrupoCreateDto": {
+        "type": "object",
+        "properties": {
+          "numero_Grupo": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "iD_Curso": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "iD_Profesor": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "horario": {
+            "type": "string",
+            "nullable": true
+          },
+          "iD_Periodo": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "GrupoUpdateDto": {
+        "type": "object",
+        "properties": {
+          "numero_Grupo": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "iD_Curso": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "iD_Profesor": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "horario": {
+            "type": "string",
+            "nullable": true
+          },
+          "iD_Periodo": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "iD_Grupo": {
             "type": "integer",
             "format": "int32"
           }
