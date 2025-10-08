@@ -63,10 +63,15 @@ namespace PV_NA_UsuariosRoles.Controllers
             }
             catch (Exception ex)
             {
-                // Registrar error en logs y retornar error 500
                 _logger.LogError(ex, "Error en el proceso de login para usuario {Usuario}", usuario);
-                return StatusCode(StatusCodes.Status500InternalServerError, new { message = "Error interno del servidor." });
+
+                return StatusCode(StatusCodes.Status500InternalServerError, new
+                {
+                    message = ex.Message,
+                    inner = ex.InnerException?.Message
+                });
             }
+
         }
 
         /// <summary>

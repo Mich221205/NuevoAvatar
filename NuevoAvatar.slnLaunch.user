@@ -5,6 +5,10 @@
       {
         "Path": "PV_NA_UsuariosRoles\\PV_NA_UsuariosRoles.csproj",
         "Action": "Start"
+      },
+      {
+        "Path": "PV_NA_Seguridad\\PV_NA_Seguridad.csproj",
+        "Action": "Start"
       }
     ]
   }
