@@ -73,6 +73,8 @@ builder.Services.AddScoped<SesionRepository>();
 builder.Services.AddScoped<TokenService>();
 builder.Services.AddScoped<AuthService>();
 builder.Services.AddHttpClient();
+builder.Services.AddScoped<RolRepository>();
+builder.Services.AddScoped<IRolService, RolService>();
 
 builder.Services.AddControllers();
 
@@ -91,6 +93,7 @@ app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapUsuarioEndpoints();
+app.MapRolEndpoints();
 app.MapControllers();
 
 app.Run();

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PV_NA_Matricula")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+528752e23616d759250bf4bb10423936d750d79d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c83f6aed8b8532b45f83767548dcd8c283f057ad")]
 [assembly: System.Reflection.AssemblyProductAttribute("PV_NA_Matricula")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PV_NA_Matricula")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
