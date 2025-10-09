@@ -75,7 +75,8 @@ builder.Services.AddScoped<AuthService>();
 builder.Services.AddHttpClient();
 builder.Services.AddScoped<RolRepository>();
 builder.Services.AddScoped<IRolService, RolService>();
-
+builder.Services.AddScoped<ParametroRepository>();
+builder.Services.AddScoped<IParametroService, ParametroService>();
 builder.Services.AddControllers();
 
 // ======== Construcción App ========
@@ -94,6 +95,7 @@ app.UseAuthorization();
 
 app.MapUsuarioEndpoints();
 app.MapRolEndpoints();
+app.MapParametroEndpoints();
 app.MapControllers();
 
 app.Run();
