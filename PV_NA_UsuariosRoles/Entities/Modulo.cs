@@ -3,7 +3,8 @@
     public class Modulo
     {
         public int ID_Modulo { get; set; }
-        public string Nombre { get; set; }
+        public string Nombre { get; set; } = null!;
     }
 }
+
 

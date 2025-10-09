@@ -75,6 +75,9 @@ builder.Services.AddScoped<AuthService>();
 builder.Services.AddHttpClient();
 builder.Services.AddScoped<RolRepository>();
 builder.Services.AddScoped<IRolService, RolService>();
+builder.Services.AddScoped<ModuloRepository>();
+builder.Services.AddScoped<IModuloService, ModuloService>();
+
 
 builder.Services.AddControllers();
 
@@ -95,6 +98,7 @@ app.UseAuthorization();
 app.MapUsuarioEndpoints();
 app.MapRolEndpoints();
 app.MapControllers();
+app.MapModuloEndpoints();
 
 app.Run();
 

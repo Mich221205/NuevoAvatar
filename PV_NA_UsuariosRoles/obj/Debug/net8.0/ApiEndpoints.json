@@ -125,6 +125,156 @@
     ]
   },
   {
+    "ContainingType": "PV_NA_UsuariosRoles.Endpoints.ModuloEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapModuloEndpoints\u003Eb__0_0",
+    "RelativePath": "modulo/",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idUsuarioAccion",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "M\u00F3dulos"
+    ]
+  },
+  {
+    "ContainingType": "PV_NA_UsuariosRoles.Endpoints.ModuloEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapModuloEndpoints\u003Eb__0_2",
+    "RelativePath": "modulo/",
+    "HttpMethod": "POST",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "modulo",
+        "Type": "PV_NA_UsuariosRoles.Entities.Modulo",
+        "IsRequired": true
+      },
+      {
+        "Name": "idUsuarioAccion",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "M\u00F3dulos"
+    ]
+  },
+  {
+    "ContainingType": "PV_NA_UsuariosRoles.Endpoints.ModuloEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapModuloEndpoints\u003Eb__0_1",
+    "RelativePath": "modulo/{id:int}",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "idUsuarioAccion",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "M\u00F3dulos"
+    ]
+  },
+  {
+    "ContainingType": "PV_NA_UsuariosRoles.Endpoints.ModuloEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapModuloEndpoints\u003Eb__0_3",
+    "RelativePath": "modulo/{id:int}",
+    "HttpMethod": "PUT",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "modulo",
+        "Type": "PV_NA_UsuariosRoles.Entities.Modulo",
+        "IsRequired": true
+      },
+      {
+        "Name": "idUsuarioAccion",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "M\u00F3dulos"
+    ]
+  },
+  {
+    "ContainingType": "PV_NA_UsuariosRoles.Endpoints.ModuloEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapModuloEndpoints\u003Eb__0_4",
+    "RelativePath": "modulo/{id:int}",
+    "HttpMethod": "DELETE",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "idUsuarioAccion",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "M\u00F3dulos"
+    ]
+  },
+  {
     "ContainingType": "PV_NA_UsuariosRoles.Endpoints.RolEndpoints\u002B\u003C\u003Ec",
     "Method": "\u003CMapRolEndpoints\u003Eb__0_0",
     "RelativePath": "rol/",
