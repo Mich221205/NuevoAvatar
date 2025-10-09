@@ -42,7 +42,7 @@ namespace PV_NA_UsuariosRoles.Repository
                 INNER JOIN Rol R ON U.ID_Rol = R.ID_Rol
                 WHERE (@identificacion IS NULL OR U.Identificacion LIKE '%' + @identificacion + '%')
                 AND (@nombre IS NULL OR U.Nombre LIKE '%' + @nombre + '%')
-                AND (@tipo IS NULL OR R.Nombre LIKE '%' + @tipo + '%')"; // Ahora filtra por rol (Profesor/Estudiante)
+                AND (@tipo IS NULL OR R.Nombre LIKE '%' + @tipo + '%')"; //filtra por rol (Profesor/Estudiante)
 
             return await conn.QueryAsync<Usuario>(sql, new { identificacion, nombre, tipo });
         }

@@ -125,6 +125,156 @@
     ]
   },
   {
+    "ContainingType": "PV_NA_UsuariosRoles.Endpoints.RolEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapRolEndpoints\u003Eb__0_0",
+    "RelativePath": "rol/",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idUsuarioAccion",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Roles"
+    ]
+  },
+  {
+    "ContainingType": "PV_NA_UsuariosRoles.Endpoints.RolEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapRolEndpoints\u003Eb__0_2",
+    "RelativePath": "rol/",
+    "HttpMethod": "POST",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "rol",
+        "Type": "PV_NA_UsuariosRoles.Entities.Rol",
+        "IsRequired": true
+      },
+      {
+        "Name": "idUsuarioAccion",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Roles"
+    ]
+  },
+  {
+    "ContainingType": "PV_NA_UsuariosRoles.Endpoints.RolEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapRolEndpoints\u003Eb__0_1",
+    "RelativePath": "rol/{id:int}",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "idUsuarioAccion",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Roles"
+    ]
+  },
+  {
+    "ContainingType": "PV_NA_UsuariosRoles.Endpoints.RolEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapRolEndpoints\u003Eb__0_3",
+    "RelativePath": "rol/{id:int}",
+    "HttpMethod": "PUT",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "rol",
+        "Type": "PV_NA_UsuariosRoles.Entities.Rol",
+        "IsRequired": true
+      },
+      {
+        "Name": "idUsuarioAccion",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Roles"
+    ]
+  },
+  {
+    "ContainingType": "PV_NA_UsuariosRoles.Endpoints.RolEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapRolEndpoints\u003Eb__0_4",
+    "RelativePath": "rol/{id:int}",
+    "HttpMethod": "DELETE",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "idUsuarioAccion",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Roles"
+    ]
+  },
+  {
     "ContainingType": "PV_NA_UsuariosRoles.Endpoints.UsuarioEndpoints\u002B\u003C\u003Ec",
     "Method": "\u003CMapUsuarioEndpoints\u003Eb__0_0",
     "RelativePath": "usuario/",
