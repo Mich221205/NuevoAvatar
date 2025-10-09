@@ -1,21 +1,22 @@
-﻿using System.Data;
-using Microsoft.Data.SqlClient;
-using Microsoft.Extensions.Configuration;
+﻿using Microsoft.Data.SqlClient;
+using System.Data;
 
 namespace PV_NA_UsuariosRoles.Repository
 {
-    public class DbConnectionFactory
+    public class DbConnectionFactory : IDbConnectionFactory
     {
-        private readonly IConfiguration _config;
-        public DbConnectionFactory(IConfiguration config)
+        private readonly IConfiguration _configuration;
+
+        public DbConnectionFactory(IConfiguration configuration)
         {
-            _config = config;
+            _configuration = configuration;
         }
 
         public IDbConnection CreateConnection()
         {
-            string connectionString = _config.GetConnectionString("DefaultConnection")!;
-            return new SqlConnection(connectionString);
+            return new SqlConnection(_configuration.GetConnectionString("DefaultConnection"));
         }
     }
 }
+
+

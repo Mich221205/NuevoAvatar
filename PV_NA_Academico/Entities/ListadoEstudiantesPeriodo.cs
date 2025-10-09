@@ -1,14 +1,13 @@
 ﻿namespace PV_NA_Academico.Entities
 {
-    public class ListadoEstudiantesPeriodo
+    public class ListadoEstudiante
     {
-        public string Periodo { get; set; }
-        public string TipoIdentificacion { get; set; }
-        public string Identificacion { get; set; }
-        public string NombreCompleto { get; set; }
-        public string Carrera { get; set; }
-        public string Curso { get; set; }
-        public string Grupo { get; set; }
+        public string Periodo { get; set; } = string.Empty;
+        public string TipoIdentificacion { get; set; } = string.Empty;
+        public string Identificacion { get; set; } = string.Empty;
+        public string NombreCompleto { get; set; } = string.Empty;
+        public string Carrera { get; set; } = string.Empty;
+        public string Curso { get; set; } = string.Empty;
+        public string Grupo { get; set; } = string.Empty;
     }
 }
-

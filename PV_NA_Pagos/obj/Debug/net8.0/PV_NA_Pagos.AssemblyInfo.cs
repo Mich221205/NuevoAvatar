@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PV_NA_Pagos")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+55eaaba199d6ee789664ca909fb77017952beb5a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+54f857b3c47ac9c9bb06a51f0151521cf1d2a84b")]
 [assembly: System.Reflection.AssemblyProductAttribute("PV_NA_Pagos")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PV_NA_Pagos")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

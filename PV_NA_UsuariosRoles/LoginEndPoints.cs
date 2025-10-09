@@ -57,13 +57,19 @@ namespace PV_NA_UsuariosRoles.Controllers
 namespace PV_NA_UsuariosRoles.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
-    public class LoginController : ControllerBase
+    [Route("login")]
+    public class LoginEndpoints : ControllerBase
+
     {
         private readonly AuthService _authService;
-        private readonly ILogger<LoginController> _logger;
+        private readonly ILogger<LoginEndpoints> _logger;
 
-        public LoginController(AuthService authService, ILogger<LoginController> logger)
+        /// <summary>
+        /// Constructor del controlador de autenticación
+        /// </summary>
+        /// <param name="authService">Servicio de autenticación</param>
+        /// <param name="logger">Logger para registro de eventos</param>
+        public LoginEndpoints(AuthService authService, ILogger<LoginEndpoints> logger)
         {
             _authService = authService;
             _logger = logger;
@@ -107,9 +113,15 @@ namespace PV_NA_UsuariosRoles.Controllers
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "Error en login para usuario: {Usuario}", usuario);
-                return StatusCode(500, new { message = "Error interno del servidor." });
+                _logger.LogError(ex, "Error en el proceso de login para usuario {Usuario}", usuario);
+
+                return StatusCode(StatusCodes.Status500InternalServerError, new
+                {
+                    message = ex.Message,
+                    inner = ex.InnerException?.Message
+                });
             }
+
         }
 
         /// <summary>

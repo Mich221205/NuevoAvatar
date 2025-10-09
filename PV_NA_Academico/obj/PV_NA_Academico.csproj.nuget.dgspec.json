@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jota2\\Documents\\GitHub\\NuevoAvatar\\PV_NA_Academico\\PV_NA_Academico.csproj": {}
+    "D:\\Proyectos\\Proyecto_Progra_Local\\NuevoAvatar\\PV_NA_Academico\\PV_NA_Academico.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jota2\\Documents\\GitHub\\NuevoAvatar\\PV_NA_Academico\\PV_NA_Academico.csproj": {
+    "D:\\Proyectos\\Proyecto_Progra_Local\\NuevoAvatar\\PV_NA_Academico\\PV_NA_Academico.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jota2\\Documents\\GitHub\\NuevoAvatar\\PV_NA_Academico\\PV_NA_Academico.csproj",
+        "projectUniqueName": "D:\\Proyectos\\Proyecto_Progra_Local\\NuevoAvatar\\PV_NA_Academico\\PV_NA_Academico.csproj",
         "projectName": "PV_NA_Academico",
-        "projectPath": "C:\\Users\\jota2\\Documents\\GitHub\\NuevoAvatar\\PV_NA_Academico\\PV_NA_Academico.csproj",
-        "packagesPath": "C:\\Users\\jota2\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jota2\\Documents\\GitHub\\NuevoAvatar\\PV_NA_Academico\\obj\\",
+        "projectPath": "D:\\Proyectos\\Proyecto_Progra_Local\\NuevoAvatar\\PV_NA_Academico\\PV_NA_Academico.csproj",
+        "packagesPath": "C:\\Users\\Pablo Muniz\\.nuget\\packages\\",
+        "outputPath": "D:\\Proyectos\\Proyecto_Progra_Local\\NuevoAvatar\\PV_NA_Academico\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\jota2\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Pablo Muniz\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -50,9 +50,17 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.1.66, )"
+            },
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[8.0.20, )"
+            },
+            "Microsoft.Data.SqlClient": {
+              "target": "Package",
+              "version": "[6.1.1, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
@@ -78,7 +86,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.301/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

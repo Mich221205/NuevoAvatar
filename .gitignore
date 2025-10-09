@@ -1,0 +1,31 @@
+# Compiled binary files
+*.dll
+*.exe
+*.pdb
+*.cache
+*.log
+
+# Build output folders
+bin/
+obj/
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.rsuser
+
+# Visual Studio folders
+.vs/
+_TestResults/
+_TestReports/
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.swp
+
+# OS generated files
+.DS_Store
+Thumbs.db

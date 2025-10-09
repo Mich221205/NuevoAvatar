@@ -15,8 +15,7 @@ namespace PV_NA_Seguridad.Repository
 
         public async Task<int> InsertAsync(Bitacora bitacora)
         {
-            string sql = @"INSERT INTO Bitacora (ID_Usuario, Accion)
-                           VALUES (@ID_Usuario, @Accion)";
+            string sql = @"INSERT INTO Bitacora (ID_Usuario, Accion) VALUES (@ID_Usuario, @Accion)";
             return await _connection.ExecuteAsync(sql, bitacora);
         }
 
@@ -28,9 +27,7 @@ namespace PV_NA_Seguridad.Repository
 
         public async Task<IEnumerable<Bitacora>> GetByUsuarioAsync(int idUsuario)
         {
-            string sql = @"SELECT * FROM Bitacora 
-                           WHERE ID_Usuario = @idUsuario 
-                           ORDER BY Fecha DESC";
+            string sql = @"SELECT * FROM Bitacora  WHERE ID_Usuario = @idUsuario ORDER BY Fecha DESC";
             return await _connection.QueryAsync<Bitacora>(sql, new { idUsuario });
         }
     }

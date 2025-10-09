@@ -1,0 +1,236 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "API Factura - IPN1",
+    "description": "Servicio para facturación y pagos de los estudiantes (HU IPN1 e IPN2).",
+    "version": "v1"
+  },
+  "paths": {
+    "/factura": {
+      "post": {
+        "tags": [
+          "PV_NA_Pagos"
+        ],
+        "summary": "Crea una factura nueva para un estudiante.",
+        "parameters": [
+          {
+            "name": "idEstudiante",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "idUsuario",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "PV_NA_Pagos"
+        ],
+        "summary": "Obtiene todas las facturas.",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/factura/{id}": {
+      "get": {
+        "tags": [
+          "PV_NA_Pagos"
+        ],
+        "summary": "Obtiene una factura por su ID.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/factura/{id}/reversar": {
+      "post": {
+        "tags": [
+          "PV_NA_Pagos"
+        ],
+        "summary": "Reversa (anula) una factura existente.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "idUsuario",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/pago": {
+      "post": {
+        "tags": [
+          "PV_NA_Pagos"
+        ],
+        "summary": "Crea un nuevo pago asociado a una factura.",
+        "parameters": [
+          {
+            "name": "idFactura",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "monto",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "number",
+              "format": "double"
+            }
+          },
+          {
+            "name": "idUsuario",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "PV_NA_Pagos"
+        ],
+        "summary": "Obtiene todos los pagos registrados.",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/pago/{id}": {
+      "get": {
+        "tags": [
+          "PV_NA_Pagos"
+        ],
+        "summary": "Obtiene un pago por su ID.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/pago/{id}/reversar": {
+      "post": {
+        "tags": [
+          "PV_NA_Pagos"
+        ],
+        "summary": "Reversa (anula) un pago existente.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "idUsuario",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "Bearer": {
+        "type": "apiKey",
+        "description": "Ingrese el token JWT con el formato: Bearer {token}",
+        "name": "Authorization",
+        "in": "header"
+      }
+    }
+  },
+  "security": [
+    {
+      "Bearer": [ ]
+    }
+  ]
+}

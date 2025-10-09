@@ -3,6 +3,7 @@
     public class Rol
     {
         public int ID_Rol { get; set; }
-        public string Nombre { get; set; }
+        public string Nombre { get; set; } = null!;
     }
 }
+
