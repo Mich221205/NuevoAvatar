@@ -1,0 +1,101 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "API Académico - ACA1 y ACA2",
+    "description": "Servicio para consultar el historial académico y el listado de estudiantes (HU ACA1 y HU ACA2).",
+    "version": "v1"
+  },
+  "paths": {
+    "/historialacademico": {
+      "get": {
+        "tags": [
+          "PV_NA_Academico"
+        ],
+        "summary": "Consulta el historial académico de un estudiante.",
+        "description": "Devuelve los cursos con su promedio y periodo a partir de la tabla HistorialAcademico.",
+        "operationId": "ObtenerHistorialAcademico",
+        "parameters": [
+          {
+            "name": "tipoIdentificacion",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "identificacion",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "idUsuario",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/listadoestudiantes": {
+      "get": {
+        "tags": [
+          "PV_NA_Academico"
+        ],
+        "summary": "Lista estudiantes matriculados en un período.",
+        "description": "Devuelve Periodo, TipoIdentificacion, Identificacion, NombreCompleto, Carrera, Curso, Grupo desde ListadoEstudiantesPeriodo.",
+        "operationId": "ObtenerListadoEstudiantesPeriodo",
+        "parameters": [
+          {
+            "name": "periodo",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "idUsuario",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "Bearer": {
+        "type": "apiKey",
+        "description": "Ingrese el token JWT con el formato: Bearer {token}",
+        "name": "Authorization",
+        "in": "header"
+      }
+    }
+  },
+  "security": [
+    {
+      "Bearer": [ ]
+    }
+  ]
+}

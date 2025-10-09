@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PV_NA_Notificaciones")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+43df76d83696d24f464988aa85c31b5137c0917f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fd4b706843a508bff98e093dfb9aac0b12aea9b2")]
 [assembly: System.Reflection.AssemblyProductAttribute("PV_NA_Notificaciones")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PV_NA_Notificaciones")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

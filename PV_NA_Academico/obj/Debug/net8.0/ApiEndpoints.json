@@ -1,0 +1,67 @@
+[
+  {
+    "ContainingType": "PV_NA_Academico.HistorialEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapHistorialEndpoints\u003Eb__0_0",
+    "RelativePath": "historialacademico",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "tipoIdentificacion",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "identificacion",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "idUsuario",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "ObtenerHistorialAcademico",
+    "Description": "Devuelve los cursos con su promedio y periodo a partir de la tabla HistorialAcademico.",
+    "Summary": "Consulta el historial acad\u00E9mico de un estudiante."
+  },
+  {
+    "ContainingType": "PV_NA_Academico.ListadoEstudiantesEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapListadoEstudiantesEndpoints\u003Eb__0_0",
+    "RelativePath": "listadoestudiantes",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "periodo",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "idUsuario",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "ObtenerListadoEstudiantesPeriodo",
+    "Description": "Devuelve Periodo, TipoIdentificacion, Identificacion, NombreCompleto, Carrera, Curso, Grupo desde ListadoEstudiantesPeriodo.",
+    "Summary": "Lista estudiantes matriculados en un per\u00EDodo."
+  }
+]
