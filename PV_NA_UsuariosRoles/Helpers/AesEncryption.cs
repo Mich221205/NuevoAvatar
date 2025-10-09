@@ -5,7 +5,7 @@ namespace PV_NA_UsuariosRoles.Helpers
 {
     public static class AesEncryption
     {
-        // Clave y vector de inicialización base (en entorno real, debe venir del appsettings.json)
+        // Clave y vector de inicialización base 
         private static readonly string Key = "1234567890ABCDEF1234567890ABCDEF"; // 32 chars = 256 bits
         private static readonly string IV = "ABCDEF1234567890"; // 16 chars = 128 bits
 

@@ -102,6 +102,5 @@ app.MapControllers();
 app.MapModuloEndpoints();
 app.MapParametroEndpoints();
 
-
 app.Run();
 
