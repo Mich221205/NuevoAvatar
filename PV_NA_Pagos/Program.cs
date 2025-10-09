@@ -84,7 +84,6 @@ app.Use(async (context, next) =>
     var authClient = context.RequestServices.GetRequiredService<IHttpClientFactory>().CreateClient("AuthClient");
     var response = await authClient.GetAsync($"/login/validate?token={token}");
 
-
     if (!response.IsSuccessStatusCode)
     {
         context.Response.StatusCode = 401;
