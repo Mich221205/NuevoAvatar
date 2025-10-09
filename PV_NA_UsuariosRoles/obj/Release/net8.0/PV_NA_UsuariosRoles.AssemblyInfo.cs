@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PV_NA_UsuariosRoles")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+75f642f1a7156f36629a3565c1f3be21751f6045")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+aeae46b59cf66f20a21c96b8b5b1c944074d4319")]
 [assembly: System.Reflection.AssemblyProductAttribute("PV_NA_UsuariosRoles")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PV_NA_UsuariosRoles")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

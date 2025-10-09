@@ -77,7 +77,8 @@ builder.Services.AddScoped<RolRepository>();
 builder.Services.AddScoped<IRolService, RolService>();
 builder.Services.AddScoped<ModuloRepository>();
 builder.Services.AddScoped<IModuloService, ModuloService>();
-
+builder.Services.AddScoped<ParametroRepository>();
+builder.Services.AddScoped<IParametroService, ParametroService>();
 
 builder.Services.AddControllers();
 
@@ -99,6 +100,8 @@ app.MapUsuarioEndpoints();
 app.MapRolEndpoints();
 app.MapControllers();
 app.MapModuloEndpoints();
+app.MapParametroEndpoints();
+
 
 app.Run();
 
