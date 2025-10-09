@@ -1,0 +1,98 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "API Bitácora - GEN1",
+    "description": "Servicio para registrar y consultar bitácoras del sistema (GEN1).",
+    "version": "v1"
+  },
+  "paths": {
+    "/bitacora": {
+      "post": {
+        "tags": [
+          "PV_NA_Seguridad"
+        ],
+        "summary": "Registra una nueva acción en la bitácora.",
+        "description": "Inserta un nuevo registro en la tabla Bitacora con la fecha actual.",
+        "operationId": "RegistrarBitacora",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Bitacora"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "PV_NA_Seguridad"
+        ],
+        "summary": "Obtiene todas las bitácoras registradas.",
+        "operationId": "ListarBitacoras",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/bitacora/usuario/{idUsuario}": {
+      "get": {
+        "tags": [
+          "PV_NA_Seguridad"
+        ],
+        "summary": "Obtiene las bitácoras de un usuario específico.",
+        "operationId": "ListarBitacorasPorUsuario",
+        "parameters": [
+          {
+            "name": "idUsuario",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Bitacora": {
+        "type": "object",
+        "properties": {
+          "iD_Bitacora": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "iD_Usuario": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "accion": {
+            "type": "string",
+            "nullable": true
+          },
+          "fecha": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}

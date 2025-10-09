@@ -2,7 +2,8 @@
 {
     public class Parametro
     {
-        public string ID_Parametro { get; set; }
-        public string Valor { get; set; }
+        public string ID_Parametro { get; set; } = null!;
+        public string Valor { get; set; } = null!;
     }
 }
+

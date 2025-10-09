@@ -1,0 +1,199 @@
+[
+  {
+    "ContainingType": "PV_NA_Pagos.FacturaEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapFacturaEndpoints\u003Eb__0_0",
+    "RelativePath": "factura",
+    "HttpMethod": "POST",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idEstudiante",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "idUsuario",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Summary": "Crea una factura nueva para un estudiante."
+  },
+  {
+    "ContainingType": "PV_NA_Pagos.FacturaEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapFacturaEndpoints\u003Eb__0_2",
+    "RelativePath": "factura",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Summary": "Obtiene todas las facturas."
+  },
+  {
+    "ContainingType": "PV_NA_Pagos.FacturaEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapFacturaEndpoints\u003Eb__0_1",
+    "RelativePath": "factura/{id:int}",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Summary": "Obtiene una factura por su ID."
+  },
+  {
+    "ContainingType": "PV_NA_Pagos.FacturaEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapFacturaEndpoints\u003Eb__0_3",
+    "RelativePath": "factura/{id:int}/reversar",
+    "HttpMethod": "POST",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "idUsuario",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Summary": "Reversa (anula) una factura existente."
+  },
+  {
+    "ContainingType": "PV_NA_Pagos.PagoEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapPagoEndpoints\u003Eb__0_0",
+    "RelativePath": "pago",
+    "HttpMethod": "POST",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idFactura",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "monto",
+        "Type": "System.Decimal",
+        "IsRequired": true
+      },
+      {
+        "Name": "idUsuario",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Summary": "Crea un nuevo pago asociado a una factura."
+  },
+  {
+    "ContainingType": "PV_NA_Pagos.PagoEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapPagoEndpoints\u003Eb__0_2",
+    "RelativePath": "pago",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Summary": "Obtiene todos los pagos registrados."
+  },
+  {
+    "ContainingType": "PV_NA_Pagos.PagoEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapPagoEndpoints\u003Eb__0_1",
+    "RelativePath": "pago/{id:int}",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Summary": "Obtiene un pago por su ID."
+  },
+  {
+    "ContainingType": "PV_NA_Pagos.PagoEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapPagoEndpoints\u003Eb__0_3",
+    "RelativePath": "pago/{id:int}/reversar",
+    "HttpMethod": "POST",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "idUsuario",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Summary": "Reversa (anula) un pago existente."
+  }
+]

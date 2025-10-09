@@ -9,13 +9,13 @@ namespace PV_NA_UsuariosRoles.Repository
     /// </summary>
     public class SesionRepository
     {
-        private readonly DbConnectionFactory _factory;
+        private readonly IDbConnectionFactory _factory;
 
         /// <summary>
         /// Constructor del repositorio de sesiones
         /// </summary>
         /// <param name="factory">Factory para crear conexiones a la base de datos</param>
-        public SesionRepository(DbConnectionFactory factory)
+        public SesionRepository(IDbConnectionFactory factory)
         {
             _factory = factory;
         }
