@@ -2,7 +2,7 @@
   "openapi": "3.0.1",
   "info": {
     "title": "API Factura - IPN1",
-    "description": "Servicio para consultar el historial académico de los estudiantes (HU IPN1).",
+    "description": "Servicio para facturación y pagos de los estudiantes (HU IPN1 e IPN2).",
     "version": "v1"
   },
   "paths": {
@@ -218,5 +218,19 @@
       }
     }
   },
-  "components": { }
+  "components": {
+    "securitySchemes": {
+      "Bearer": {
+        "type": "apiKey",
+        "description": "Ingrese el token JWT con el formato: Bearer {token}",
+        "name": "Authorization",
+        "in": "header"
+      }
+    }
+  },
+  "security": [
+    {
+      "Bearer": [ ]
+    }
+  ]
 }
