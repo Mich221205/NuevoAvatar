@@ -1,0 +1,94 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "API Notificaciones - IPN3",
+    "description": "Servicio para registrar y consultar bitácoras del sistema (IPN3).",
+    "version": "v1"
+  },
+  "paths": {
+    "/notificar": {
+      "post": {
+        "tags": [
+          "PV_NA_Notificaciones"
+        ],
+        "summary": "Envía una notificación por correo (simulada).",
+        "parameters": [
+          {
+            "name": "email",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "asunto",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "cuerpo",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "idUsuario",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "PV_NA_Notificaciones"
+        ],
+        "summary": "Lista todas las notificaciones enviadas.",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/notificar/{id}": {
+      "get": {
+        "tags": [
+          "PV_NA_Notificaciones"
+        ],
+        "summary": "Obtiene una notificación por ID.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  },
+  "components": { }
+}

@@ -9,7 +9,8 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddHttpClient("BitacoraClient", client =>
 {
-    client.BaseAddress = new Uri("http://localhost:5143");
+    client.BaseAddress = new Uri("http://localhost:5210");
+
 });
 
 
@@ -29,6 +30,8 @@ builder.Services.AddScoped<IDbConnection>(sp =>
     new SqlConnection(builder.Configuration.GetConnectionString("DefaultConnection")));
 builder.Services.AddScoped<HistorialRepository>();
 builder.Services.AddScoped<HistorialService>();
+builder.Services.AddScoped<ListadoEstudiantesRepository>();
+builder.Services.AddScoped<ListadoEstudiantesService>();
 
 builder.Services.AddHttpClient();
 var app = builder.Build();
@@ -43,5 +46,6 @@ if (app.Environment.IsDevelopment())
 }
 
 app.MapHistorialEndpoints();
+app.MapListadoEstudiantesEndpoints();
 
 app.Run();
