@@ -1,0 +1,10 @@
+# Carpetas de build
+bin/
+obj/
+
+# Carpetas de VS
+.vs/
+
+# Archivos temporales
+*.user
+*.suo
