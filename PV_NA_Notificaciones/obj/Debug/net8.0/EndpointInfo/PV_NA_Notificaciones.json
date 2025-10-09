@@ -2,7 +2,7 @@
   "openapi": "3.0.1",
   "info": {
     "title": "API Notificaciones - IPN3",
-    "description": "Servicio para registrar y consultar bitácoras del sistema (IPN3).",
+    "description": "Servicio para gestión de notificaciones a estudiantes y docentes (HU IPN3).",
     "version": "v1"
   },
   "paths": {
@@ -90,5 +90,19 @@
       }
     }
   },
-  "components": { }
+  "components": {
+    "securitySchemes": {
+      "Bearer": {
+        "type": "apiKey",
+        "description": "Ingrese el token JWT con el formato: Bearer {token}",
+        "name": "Authorization",
+        "in": "header"
+      }
+    }
+  },
+  "security": [
+    {
+      "Bearer": [ ]
+    }
+  ]
 }
